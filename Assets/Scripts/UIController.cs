@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     {
         screen = 0;
         changeScreen(screen);
+        
         string dir = "..\\Royal Adventure\\saves.txt";
         if(File.Exists(dir))
         {
