@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
             string hero_class = upgrades.Split(",")[0];
             if(hero_class.Equals("W"))
             {
-                return "Wizard";
+                return "Mage";
             }
             else if (hero_class.Equals("K"))
             {
@@ -56,6 +57,19 @@ public class Player : MonoBehaviour
             }
         }
         return "";
+    }
+
+    public void tryUpgrade(string up, Button button)
+    {
+        string[] info = up.Split(",");
+        if(int.Parse(info[1]) > currency)
+        {
+            return;
+        }
+        else
+        {
+
+        }
     }
 
 }
